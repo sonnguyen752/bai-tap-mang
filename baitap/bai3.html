@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      
+    // bài 3: 
+    var str = window.prompt();
+    var CapsLk = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var thuong = "abcdefghijklmnopqrstuvwxyz";
+    var resuft = [];
+    for (var x = 0; x < str.length; x++) {
+        if (CapsLk.indexOf(str[x]) !== -1) {
+            resuft.push(str[x].toLowerCase());
+        } else if (thuong.indexOf(str[x])!== -1) {
+            resuft.push(str[x].toUpperCase());
+        } else {
+            resuft.push(str[x]);
+        }
+    } 
+    document.write(resuft.join(''))
+</script>
