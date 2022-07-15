@@ -17,7 +17,7 @@
         [6,7,3,4,2],
         [6,7,4,3,2],
     ]
-    
+    let sumEven = 0;
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
         var total_row = 0;
@@ -26,9 +26,13 @@
                 sum += array[i][j];
             }
             total_row += array[i][j];
+            if (array[i][j] % 2 == 0) {
+                sumEven += array[i][j];
+            }
         }
         document.write("Tong cua hang: "+ i + "la: "+ total_row + "<br>");
     }
+    document.write("tong cac phan tu chan la: "+sumEven + "<br>");
     document.write("tong cac phan tu vien cua mang la: "+ sum + "<br>");
     
 </script>
