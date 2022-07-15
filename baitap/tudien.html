@@ -8,25 +8,24 @@
 </head>
 <body>
     <input type="text" id="txt">
-    <button onclick="translate()">Translate</button>
-    <p id="resuft"></p>
+    <input type="button"  value="translate" onclick="dich()">
+    <p id="resuft">..........</p>
 </body>
 </html>
 <script>
-
-    let Eng = ["apple", "banana", "organ"];
-    let Viet = ["tao", "chuoi", "cam"];
-    let resuft = "";
-    function translate() {
+        let Eng = ["apple", "banana", "orange", "one", "two"];
+        let Viet = ["táo", "chuối", "cam", "số 1", "số 2"];
+        let resuft = "";
+    function dich() {
         for (let i = 0; i < Eng.length; i++) {
             if (document.getElementById("txt").value == Eng[i]){
-                for (let j = 0; j < Viet.length; j++) {
-                    j = i;
-                    resuft = Viet[j];
-               }
+                let a = Eng.indexOf(Eng[i]);
+                resuft = Viet[a];              
+            }
+            else {
+                resuft = "từ bạn nhập không nằm trong từ điển";
             }
         }
         document.getElementById("resuft").innerHTML = resuft;
     } 
-
 </script>
